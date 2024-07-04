@@ -1,0 +1,55 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://6qk3g76vssok"]
+
+[ext_resource type="FontFile" uid="uid://o3tpqgg7rdyp" path="res://assets/fonts/monsterrat/semi_bold.ttf" id="1_hhlt1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ugcda"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rjldf"]
+bg_color = Color(0, 0, 0, 0.75)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtyai"]
+bg_color = Color(0.156863, 0.156863, 0.164706, 0.772549)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.439216)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qmxlo"]
+bg_color = Color(1, 1, 1, 0.466667)
+border_width_left = 2
+border_width_top = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.439216)
+border_blend = true
+
+[resource]
+default_font = ExtResource("1_hhlt1")
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(0.694118, 0.694118, 0.694118, 1)
+Button/colors/font_hover_pressed_color = Color(0.694118, 0.694118, 0.694118, 1)
+Button/colors/font_pressed_color = Color(0.352941, 0.352941, 0.352941, 1)
+Button/colors/icon_hover_color = Color(0.605469, 0.605469, 0.605469, 1)
+Button/colors/icon_hover_pressed_color = Color(0.695313, 0.695313, 0.695313, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(0.351563, 0.351563, 0.351563, 1)
+Button/styles/focus = SubResource("StyleBoxFlat_ugcda")
+CheckBox/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+CheckBox/colors/font_hover_pressed_color = Color(0.894531, 0.894531, 0.894531, 1)
+CheckBox/colors/font_pressed_color = Color(1, 1, 1, 1)
+Panel/styles/panel = SubResource("StyleBoxFlat_rjldf")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_rtyai")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_qmxlo")

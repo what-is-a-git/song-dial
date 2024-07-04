@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6uor0c436014"]
+
+[ext_resource type="Theme" uid="uid://6qk3g76vssok" path="res://assets/resources/theme.tres" id="1_y56t4"]
+[ext_resource type="Script" path="res://scenes/queue.gd" id="2_se4ad"]
+[ext_resource type="FontFile" uid="uid://b1dbanptwgp48" path="res://assets/fonts/monsterrat/bold.ttf" id="3_g22ti"]
+[ext_resource type="Texture2D" uid="uid://bhobnseuvfjn2" path="res://assets/images/icons/delete.svg" id="3_m8hin"]
+
+[node name="queue" type="Control"]
+layout_mode = 3
+anchor_left = 0.65
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_y56t4")
+script = ExtResource("2_se4ad")
+
+[node name="panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="clear" type="Button" parent="panel"]
+modulate = Color(1, 0.502, 0.502, 0.75)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -64.0
+offset_bottom = 32.0
+grow_horizontal = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_g22ti")
+theme_override_font_sizes/font_size = 12
+text = "Clear"
+icon = ExtResource("3_m8hin")
+flat = true
+expand_icon = true
+
+[node name="scroll_container" type="ScrollContainer" parent="panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="vbox" type="VBoxContainer" parent="panel/scroll_container"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="pressed" from="panel/clear" to="." method="_on_clear_pressed"]

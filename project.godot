@@ -1,0 +1,57 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="song dial"
+config/description="simple, yet effective music player built with godot"
+config/version="1.0.0"
+run/main_scene="res://scenes/root.tscn"
+config/features=PackedStringArray("4.2", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
+config/icon="res://art/icon.svg"
+
+[audio]
+
+general/ios/session_category=3
+general/ios/mix_with_others=true
+
+[autoload]
+
+Startup="res://scripts/autoloads/startup.gd"
+Globals="*res://scripts/autoloads/globals.gd"
+Config="*res://scripts/autoloads/config.gd"
+AudioManager="*res://scenes/autoloads/audio_manager.tscn"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=480
+window/subwindows/embed_subwindows=false
+
+[editor]
+
+naming/node_name_num_separator=2
+naming/node_name_casing=2
+
+[file_customization]
+
+folder_colors={
+"res://addons/": "teal",
+"res://art/": "yellow",
+"res://assets/": "blue",
+"res://scenes/": "pink",
+"res://scripts/": "purple"
+}
+
+[physics]
+
+common/physics_ticks_per_second=1

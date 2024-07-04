@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://dogn7e3ac0v5o"]
+
+[ext_resource type="Theme" uid="uid://6qk3g76vssok" path="res://assets/resources/theme.tres" id="1_6uuuf"]
+[ext_resource type="PackedScene" uid="uid://dbgs8krrprfdn" path="res://scenes/playing.tscn" id="2_ghcrr"]
+[ext_resource type="PackedScene" uid="uid://c6uor0c436014" path="res://scenes/queue.tscn" id="2_isep8"]
+[ext_resource type="Texture2D" uid="uid://33i84kr55fpw" path="res://assets/images/icons/settings.svg" id="2_x1k0d"]
+[ext_resource type="PackedScene" uid="uid://cd7sxvg0duy5x" path="res://scenes/settings.tscn" id="3_b366i"]
+[ext_resource type="Script" path="res://scenes/settings.gd" id="3_rrfuh"]
+
+[node name="root" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_6uuuf")
+
+[node name="panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0.75)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="settings" type="Button" parent="panel"]
+modulate = Color(1, 1, 1, 0.75)
+layout_mode = 1
+anchors_preset = -1
+offset_right = 28.0
+offset_bottom = 28.0
+mouse_default_cursor_shape = 2
+icon = ExtResource("2_x1k0d")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_rrfuh")
+
+[node name="window" type="Window" parent="panel/settings"]
+title = "dial settings"
+initial_position = 2
+size = Vector2i(320, 240)
+visible = false
+transient = true
+unresizable = true
+popup_window = true
+min_size = Vector2i(320, 240)
+theme = ExtResource("1_6uuuf")
+
+[node name="settings" parent="panel/settings/window" instance=ExtResource("3_b366i")]
+
+[node name="queue" parent="panel" instance=ExtResource("2_isep8")]
+visible = false
+layout_mode = 1
+
+[node name="playing" parent="panel" instance=ExtResource("2_ghcrr")]
+layout_mode = 1
+
+[connection signal="mouse_entered" from="panel/settings" to="panel/settings" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="panel/settings" to="panel/settings" method="_on_mouse_exited"]
+[connection signal="pressed" from="panel/settings" to="panel/settings/window" method="popup"]
+[connection signal="close_requested" from="panel/settings/window" to="panel/settings" method="_on_mouse_exited"]
+[connection signal="close_requested" from="panel/settings/window" to="panel/settings/window" method="hide"]

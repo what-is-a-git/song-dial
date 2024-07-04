@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://cd7sxvg0duy5x"]
+
+[ext_resource type="Theme" uid="uid://6qk3g76vssok" path="res://assets/resources/theme.tres" id="1_f1648"]
+[ext_resource type="Script" path="res://scripts/setting_checkbox.gd" id="2_4h6io"]
+[ext_resource type="Script" path="res://scripts/settings_version.gd" id="3_tggm4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wmjyl"]
+font_size = 12
+
+[node name="settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_f1648")
+
+[node name="panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="always_show_settings" type="CheckBox" parent="panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -133.0
+offset_top = -14.5
+offset_right = 133.0
+offset_bottom = 14.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Always show settings button"
+flat = true
+alignment = 1
+script = ExtResource("2_4h6io")
+
+[node name="version" type="Label" parent="panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -21.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "song dial - v$VERSION"
+label_settings = SubResource("LabelSettings_wmjyl")
+horizontal_alignment = 1
+vertical_alignment = 2
+script = ExtResource("3_tggm4")
+
+[connection signal="toggled" from="panel/always_show_settings" to="panel/always_show_settings" method="_on_toggled"]

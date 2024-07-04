@@ -1,0 +1,307 @@
+[gd_scene load_steps=21 format=3 uid="uid://dbgs8krrprfdn"]
+
+[ext_resource type="Theme" uid="uid://6qk3g76vssok" path="res://assets/resources/theme.tres" id="1_n3tc6"]
+[ext_resource type="Script" path="res://scenes/playing.gd" id="2_3woga"]
+[ext_resource type="Script" path="res://scripts/now_playing_bar.gd" id="3_oi1tw"]
+[ext_resource type="Texture2D" uid="uid://cqo2dkjqh2taq" path="res://assets/images/icons/volume_up.svg" id="4_2l7ni"]
+[ext_resource type="Texture2D" uid="uid://bjqjront55knl" path="res://assets/images/icons/play_arrow.svg" id="4_jbivw"]
+[ext_resource type="Texture2D" uid="uid://d2rs7vfg2n0wn" path="res://assets/images/icons/skip_previous.svg" id="4_nby6k"]
+[ext_resource type="Script" path="res://scripts/volume_button.gd" id="5_m5nx7"]
+[ext_resource type="Texture2D" uid="uid://caumden3mx52p" path="res://assets/images/icons/skip_next.svg" id="6_ayww8"]
+[ext_resource type="Texture2D" uid="uid://b1njeaotnvsm4" path="res://assets/images/icons/shuffle.svg" id="6_gshcn"]
+[ext_resource type="Script" path="res://scripts/shuffle_button.gd" id="7_r5wbg"]
+[ext_resource type="Script" path="res://scripts/play_button.gd" id="8_tgcbr"]
+[ext_resource type="Script" path="res://scripts/skip_button.gd" id="9_mav4x"]
+[ext_resource type="Texture2D" uid="uid://kfsptkpw0x5x" path="res://assets/images/icons/repeat.svg" id="11_w4fs5"]
+[ext_resource type="Script" path="res://scripts/loop_button.gd" id="12_rroe6"]
+[ext_resource type="Texture2D" uid="uid://bjgtkcjsetng3" path="res://assets/images/icons/queue_music.svg" id="12_w3pnc"]
+[ext_resource type="Script" path="res://scripts/queue_button.gd" id="15_fxop7"]
+[ext_resource type="Script" path="res://scripts/song_name.gd" id="16_cl75d"]
+[ext_resource type="FontFile" uid="uid://b1dbanptwgp48" path="res://assets/fonts/monsterrat/bold.ttf" id="17_621jr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cowkp"]
+font = ExtResource("17_621jr")
+font_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_p3wh7"]
+font_size = 10
+font_color = Color(0.640625, 0.640625, 0.640625, 1)
+
+[node name="playing" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_n3tc6")
+script = ExtResource("2_3woga")
+metadata/_edit_lock_ = true
+
+[node name="controls" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -64.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="left" type="Control" parent="controls"]
+layout_mode = 1
+anchor_top = 0.5
+anchor_right = 0.35
+anchor_bottom = 1.0
+
+[node name="progress_bar" type="ProgressBar" parent="controls/left"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_default_cursor_shape = 15
+max_value = 60.0
+step = 0.001
+value = 30.0
+show_percentage = false
+script = ExtResource("3_oi1tw")
+
+[node name="label" type="Label" parent="controls/left/progress_bar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0:30 / 1:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="center" type="Control" parent="controls"]
+layout_mode = 1
+anchor_left = 0.35
+anchor_top = 0.5
+anchor_right = 0.65
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="shuffle_button" type="Button" parent="controls/center"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.9)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -32.0
+offset_right = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+icon = ExtResource("6_gshcn")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("7_r5wbg")
+
+[node name="back_button" type="Button" parent="controls/center"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.9)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -32.0
+offset_right = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+icon = ExtResource("4_nby6k")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("9_mav4x")
+
+[node name="play_button" type="Button" parent="controls/center"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.9)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -32.0
+offset_right = 16.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+icon = ExtResource("4_jbivw")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_tgcbr")
+
+[node name="next_button" type="Button" parent="controls/center"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.9)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -32.0
+offset_right = 48.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+icon = ExtResource("6_ayww8")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("9_mav4x")
+direction = 1
+
+[node name="loop_button" type="Button" parent="controls/center"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.5)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = -32.0
+offset_right = 80.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+icon = ExtResource("11_w4fs5")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("12_rroe6")
+
+[node name="right" type="Control" parent="controls"]
+layout_mode = 1
+anchor_left = 0.65
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="volume_bar" type="ProgressBar" parent="controls/right"]
+unique_name_in_owner = true
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -36.0
+offset_bottom = -4.0
+grow_vertical = 0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+
+[node name="volume_button" type="TextureRect" parent="controls/right"]
+self_modulate = Color(0.941406, 0.941406, 0.941406, 1)
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -36.0
+offset_bottom = -4.0
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+texture = ExtResource("4_2l7ni")
+expand_mode = 1
+stretch_mode = 4
+script = ExtResource("5_m5nx7")
+
+[node name="queue_button" type="Button" parent="controls/right"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.5)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -32.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+icon = ExtResource("12_w3pnc")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("15_fxop7")
+
+[node name="song_name" type="Label" parent="controls"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = 17.0
+grow_horizontal = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+text = "Song Name UwU"
+label_settings = SubResource("LabelSettings_cowkp")
+horizontal_alignment = 1
+text_overrun_behavior = 3
+script = ExtResource("16_cl75d")
+
+[node name="artist_name" type="Label" parent="controls"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.218
+offset_left = 4.0
+offset_top = 17.0
+offset_right = -4.0
+offset_bottom = 16.048
+grow_horizontal = 2
+text = "Artist Name"
+label_settings = SubResource("LabelSettings_p3wh7")
+horizontal_alignment = 1
+text_overrun_behavior = 3
+
+[connection signal="mouse_entered" from="controls/left/progress_bar" to="controls/left/progress_bar" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="controls/left/progress_bar" to="controls/left/progress_bar" method="_on_mouse_exited"]
+[connection signal="value_changed" from="controls/left/progress_bar" to="controls/left/progress_bar" method="_on_value_changed"]
+[connection signal="pressed" from="controls/center/shuffle_button" to="controls/center/shuffle_button" method="_on_pressed"]
+[connection signal="pressed" from="controls/center/back_button" to="controls/center/back_button" method="_on_pressed"]
+[connection signal="pressed" from="controls/center/play_button" to="controls/center/play_button" method="_on_pressed"]
+[connection signal="pressed" from="controls/center/next_button" to="controls/center/next_button" method="_on_pressed"]
+[connection signal="pressed" from="controls/center/loop_button" to="controls/center/loop_button" method="_on_pressed"]
+[connection signal="mouse_entered" from="controls/right/volume_bar" to="controls/right/volume_button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="controls/right/volume_bar" to="controls/right/volume_button" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="controls/right/volume_button" to="controls/right/volume_button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="controls/right/volume_button" to="controls/right/volume_button" method="_on_mouse_exited"]
+[connection signal="pressed" from="controls/right/queue_button" to="controls/right/queue_button" method="_on_pressed"]
+[connection signal="mouse_entered" from="controls/song_name" to="controls/song_name" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="controls/song_name" to="controls/song_name" method="_on_mouse_exited"]

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient50">
+      <stop
+         style="stop-color:#ff8080;stop-opacity:1;"
+         offset="0"
+         id="stop51" />
+      <stop
+         style="stop-color:#ffd080;stop-opacity:1;"
+         offset="0.14"
+         id="stop53" />
+      <stop
+         style="stop-color:#fffd7f;stop-opacity:1;"
+         offset="0.28"
+         id="stop54" />
+      <stop
+         style="stop-color:#bfff80;stop-opacity:1;"
+         offset="0.41999999"
+         id="stop55" />
+      <stop
+         style="stop-color:#80fff7;stop-opacity:1;"
+         offset="0.56"
+         id="stop56" />
+      <stop
+         style="stop-color:#a77fff;stop-opacity:1;"
+         offset="0.69999999"
+         id="stop57" />
+      <stop
+         style="stop-color:#ff80d1;stop-opacity:1;"
+         offset="0.94"
+         id="stop52" />
+    </linearGradient>
+    <linearGradient
+       id="swatch46">
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1;"
+         offset="0"
+         id="stop46" />
+    </linearGradient>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask-powermask-path-effect27">
+      <path
+         id="mask-powermask-path-effect27_box"
+         style="fill:#ffffff;fill-opacity:1"
+         d="M 1,1 H 15 V 15 H 1 Z" />
+      <g
+         id="g27"
+         style="">
+        <circle
+           style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.69016;stroke-dasharray:none;stroke-opacity:1"
+           id="circle21"
+           r="1"
+           cy="12"
+           cx="5"
+           d="M 6,12 A 1,1 0 0 1 5,13 1,1 0 0 1 4,12 1,1 0 0 1 5,11 1,1 0 0 1 6,12 Z" />
+        <circle
+           style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.69016;stroke-dasharray:none;stroke-opacity:1"
+           id="circle22"
+           r="1"
+           cy="12"
+           cx="8"
+           d="M 9,12 A 1,1 0 0 1 8,13 1,1 0 0 1 7,12 1,1 0 0 1 8,11 1,1 0 0 1 9,12 Z" />
+        <circle
+           style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.69016;stroke-dasharray:none;stroke-opacity:1"
+           id="circle23"
+           cx="11"
+           cy="12"
+           r="1"
+           d="m 12,12 a 1,1 0 0 1 -1,1 1,1 0 0 1 -1,-1 1,1 0 0 1 1,-1 1,1 0 0 1 1,1 z" />
+        <rect
+           style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.847884;stroke-dasharray:none;stroke-opacity:1"
+           id="rect23"
+           width="1.5"
+           height="6"
+           x="6"
+           y="3.5"
+           rx="0.75"
+           transform="matrix(0.81372805,0.10939991,-0.10939991,0.81372805,2.1848337,0.4245928)"
+           d="m 6.75,3.5 c 0.4155,0 0.75,0.3345 0.75,0.75 v 4.5 C 7.5,9.1655 7.1655,9.5 6.75,9.5 6.3345,9.5 6,9.1655 6,8.75 V 4.25 C 6,3.8345 6.3345,3.5 6.75,3.5 Z" />
+        <rect
+           style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.893748;stroke-dasharray:none;stroke-opacity:1"
+           id="rect24"
+           width="5"
+           height="2"
+           x="6"
+           y="3.5"
+           rx="1"
+           transform="matrix(0.81372805,0.10939991,-0.10939991,0.81372805,2.1848337,0.4245928)"
+           d="m 7,3.5 h 3 c 0.554,0 1,0.446 1,1 0,0.554 -0.446,1 -1,1 H 7 c -0.554,0 -1,-0.446 -1,-1 0,-0.554 0.446,-1 1,-1 z" />
+        <rect
+           style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.692295;stroke-dasharray:none;stroke-opacity:1"
+           id="rect25"
+           width="3"
+           height="2"
+           x="4.5"
+           y="8"
+           rx="1"
+           transform="matrix(0.81372805,0.10939991,-0.10939991,0.81372805,2.1848337,0.4245928)"
+           d="m 5.5,8 h 1 c 0.554,0 1,0.446 1,1 0,0.554 -0.446,1 -1,1 h -1 c -0.554,0 -1,-0.446 -1,-1 0,-0.554 0.446,-1 1,-1 z" />
+        <rect
+           style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.847884;stroke-dasharray:none;stroke-opacity:1"
+           id="rect26"
+           width="1.5"
+           height="6"
+           x="9.5"
+           y="3.5"
+           rx="0.75"
+           transform="matrix(0.81372805,0.10939991,-0.10939991,0.81372805,2.1848337,0.4245928)"
+           d="M 10.25,3.5 C 10.6655,3.5 11,3.8345 11,4.25 v 4.5 C 11,9.1655 10.6655,9.5 10.25,9.5 9.8345,9.5 9.5,9.1655 9.5,8.75 V 4.25 C 9.5,3.8345 9.8345,3.5 10.25,3.5 Z" />
+        <rect
+           style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.692295;stroke-dasharray:none;stroke-opacity:1"
+           id="rect27"
+           width="3"
+           height="2"
+           x="8"
+           y="8"
+           rx="1"
+           transform="matrix(0.81372805,0.10939991,-0.10939991,0.81372805,2.1848337,0.4245928)"
+           d="m 9,8 h 1 c 0.554,0 1,0.446 1,1 0,0.554 -0.446,1 -1,1 H 9 C 8.446,10 8,9.554 8,9 8,8.446 8.446,8 9,8 Z" />
+      </g>
+    </mask>
+    <linearGradient
+       xlink:href="#linearGradient50"
+       id="linearGradient52"
+       x1="3.1118815"
+       y1="3.0816691"
+       x2="13.051775"
+       y2="13.051775"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     id="layer1">
+    <path
+       style="fill:url(#linearGradient52);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1"
+       width="12"
+       height="12"
+       x="2"
+       y="2"
+       rx="2"
+       mask="url(#mask-powermask-path-effect27)"
+       d="m 4,2 h 8 c 1.108,0 2,0.892 2,2 v 8 c 0,1.108 -0.892,2 -2,2 H 4 C 2.892,14 2,13.108 2,12 V 4 C 2,2.892 2.892,2 4,2 Z" />
+  </g>
+</svg>
