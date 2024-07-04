@@ -26,6 +26,7 @@ func _on_files_dropped(files: PackedStringArray) -> void:
 	if not visible:
 		return
 	
+	var empty := queue.is_empty()
 	#queue.clear()
 	#index = 0
 	
@@ -36,9 +37,10 @@ func _on_files_dropped(files: PackedStringArray) -> void:
 		data.meta = {}
 		queue.push_back(data)
 	
-	update_current_song()
-	update_song_display()
-	stream_player.play()
+	if empty:
+		update_current_song()
+		update_song_display()
+		stream_player.play()
 	Queue.instance.update()
 
 
