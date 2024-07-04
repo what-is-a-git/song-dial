@@ -26,8 +26,8 @@ func _on_files_dropped(files: PackedStringArray) -> void:
 	if not visible:
 		return
 	
-	# queue.clear()
-	index = 0
+	#queue.clear()
+	#index = 0
 	
 	for file in files:
 		var data := SongData.new()
