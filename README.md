@@ -1,6 +1,10 @@
 # song-dial
 
+<img src="/art/icon.svg" width="128" height="128" align="right" >
+
 *simple, yet effective music player built with godot*
+
+![repo size](https://img.shields.io/github/repo-size/what-is-a-git/song-dial) ![](https://badgen.net/badge/license/MIT/red)
 
 ## features
 
